@@ -1,0 +1,15 @@
+https://wiki.zimbra.com/wiki/How_to_obtain_an_A%2B_in_the_Qualys_SSL_Labs_Security_Test
++
+su - zimbra
+
+zmprov gcf zimbraReverseProxySSLProtocols
+zimbraReverseProxySSLProtocols: TLSv1
+zimbraReverseProxySSLProtocols: TLSv1.1
+zimbraReverseProxySSLProtocols: TLSv1.2
+
+zmprov mcf zimbraReverseProxySSLProtocols TLSv1.2
+
+zmprov gcf zimbraReverseProxySSLProtocols
+zimbraReverseProxySSLProtocols: TLSv1.2
+
+zmproxyctl restart
